@@ -34,27 +34,27 @@ The project follows **industry best practices**, with a focus on:
 ## 📂 Project Structure
 
 lakehouse-pipeline-with-airflow/
-│
-├── dags/                   # Airflow DAG definitions
-│   └── tweet_pipeline_dag.py
-│
-├── include/                # Task scripts imported into DAGs
-│   └── tasks/
-│       └── tweet_pipeline_tasks.py
-│   └── helpers/
-│       └── minio.py
-│
-├── spark/                  # Spark job code & Dockerfile
-│   └── notebooks/tweet_transform
-│       └── convert_raw_to_bronze.py
-│       └── calculate_tweet_metrics.py
-│   └── Dockerfile
-│
-├── requirements.txt        # Python dependencies for Airflow
-├── docker-compose.override.yml
-├── Dockerfile
-├── README.md
-└── ...
+-│
+-├── dags/                   # Airflow DAG definitions
+-│   └── tweet_pipeline_dag.py
+-│
+-├── include/                # Task scripts imported into DAGs
+-│   └── tasks/
+-│       └── tweet_pipeline_tasks.py
+-│   └── helpers/
+-│       └── minio.py
+-│
+-├── spark/                  # Spark job code & Dockerfile
+-│   └── notebooks/tweet_transform
+-│       └── convert_raw_to_bronze.py
+-│       └── calculate_tweet_metrics.py
+-│   └── Dockerfile
+-│
+-├── requirements.txt        # Python dependencies for Airflow
+-├── docker-compose.override.yml
+-├── Dockerfile
+-├── README.md
+-└── ...
 
 ---
 

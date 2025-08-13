@@ -33,29 +33,25 @@ The project follows **industry best practices**, with a focus on:
 
 ## 📂 Project Structure
 
-lakehouse-pipeline-with-airflow/
--│
--├── dags/                   # Airflow DAG definitions
--│   └── tweet_pipeline_dag.py
--│
--├── include/                # Task scripts imported into DAGs
--│   └── tasks/
--│       └── tweet_pipeline_tasks.py
--│   └── helpers/
--│       └── minio.py
--│
--├── spark/                  # Spark job code & Dockerfile
--│   └── notebooks/tweet_transform
--│       └── convert_raw_to_bronze.py
--│       └── calculate_tweet_metrics.py
--│   └── Dockerfile
--│
--├── requirements.txt        # Python dependencies for Airflow
--├── docker-compose.override.yml
--├── Dockerfile
--├── README.md
--└── ...
+## Directory Breakdown
 
+### `dags/` 
+Contains Airflow DAG definitions that orchestrate the entire pipeline workflow.
+
+### `include/`
+- **`tasks/`**: Task scripts that are imported and executed by the DAGs
+- **`helpers/`**: Utility modules and helper functions (e.g., MinIO connections, data helpers)
+
+### `spark/`
+- **`notebooks/tweet_transform/`**: Spark transformation scripts for processing data through the medallion architecture
+  - Raw to Bronze layer transformations
+  - Metric calculations and aggregations
+- **`Dockerfile`**: Container configuration for Spark jobs
+
+### Configuration Files
+- **`requirements.txt`**: Python dependencies for the Airflow environment
+- **`docker-compose.override.yml`**: Docker Compose overrides for local development
+- **`Dockerfile`**: Main container configuration
 ---
 
 ## ⚙️ Workflow Design
